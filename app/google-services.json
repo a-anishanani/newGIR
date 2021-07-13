@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "166703371837",
+    "project_id": "greenindoorar",
+    "storage_bucket": "greenindoorar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166703371837:android:69ddae23ce389d8d89fc54",
+        "android_client_info": {
+          "package_name": "com.example.greenindoorar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "166703371837-ls2j88ljqj0gbvmnjs1blgscjs7d2sbm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAA0bmRR9fx2xVclJNo3r-yjevw6_myKaU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "166703371837-ls2j88ljqj0gbvmnjs1blgscjs7d2sbm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

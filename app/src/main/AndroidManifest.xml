@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.greenindoorar">
+
+    <supports-screens android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true"
+        android:anyDensity="true" />
+
+    <uses-permission android:name="com.yotadevices.framework.permission.ACCESS_BACKSCREEN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:glEsVersion="0x00030000"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="true" />
+
+    <application
+        android:extractNativeLibs="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GreenIndoorAR"
+        tools:replace="android:theme, android:icon">
+
+        <meta-data android:name="unity.splash-mode" android:value="0" />
+        <meta-data android:name="unity.splash-enable" android:value="True" />
+        <meta-data android:name="unity.build-id" />
+        <meta-data android:name="unityplayer.SkipPermissionsDialog" android:value="true" />
+        <meta-data android:name="com.google.ar.core" android:value="required" />
+
+
+        <activity android:name=".WelcomePage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".viewSnakePlant"
+            android:process=".UnityProcess" >
+
+            <meta-data
+                android:name="unityplayer.UnityActivity"
+                android:value="true" />
+
+        </activity>
+
+        <activity android:name=".SnakePlantActivity" />
+        <activity android:name=".Gallery" />
+        <activity android:name=".EditProfile" />
+        <activity android:name=".Profile" />
+        <activity android:name=".Login" />
+        <activity android:name=".Register">
+
+        </activity>
+        <activity android:name=".MainActivity">
+
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+
+    </application>
+
+
+</manifest>
