@@ -70,6 +70,11 @@ public class EditProfile extends AppCompatActivity {
         saveProfile = findViewById(R.id.saveBtn);
         deleteAccount = findViewById(R.id.deleteText);
 
+        profileEmail.setText(email);
+        profilefirstName.setText(firstName);
+        profilelastName.setText(lastName);
+        Log.d(TAG, "onCreate: " + firstName + " " + lastName + " " + email);
+
         deleteAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,6 +82,7 @@ public class EditProfile extends AppCompatActivity {
                 dialog.setTitle("Are you sure?");
                 dialog.setMessage("This action will remove all your data from the application" +
                                     " and you won't be able to access the app");
+
                 dialog.setPositiveButton("DELETE", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int i) {
@@ -144,7 +150,6 @@ public class EditProfile extends AppCompatActivity {
                         edited.put("First Name", profilefirstName.getText().toString());
                         edited.put("Last Name", profilelastName.getText().toString());
                         edited.put("Full Name", profilefirstName.getText().toString() + " " + profilelastName.getText().toString() );
-                        //edited.put("Full Name", profilefullName.getText().toString());
                         docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
@@ -165,14 +170,7 @@ public class EditProfile extends AppCompatActivity {
             }
         });
 
-        profileEmail.setText(email);
-        profilefirstName.setText(firstName);
-        profilelastName.setText(lastName);
 
-
-
-
-        Log.d(TAG, "onCreate: " + firstName + " " + lastName + " " + email);
     }
 
     @Override
@@ -181,9 +179,6 @@ public class EditProfile extends AppCompatActivity {
         if (requestCode == 1000) {
             if (resultCode == Activity.RESULT_OK) {
                 Uri imageUri = data.getData();
-
-                //profileImage.setImageURI(imageUri);
-
                 uploadImagetoFirebase(imageUri);
             }
         }

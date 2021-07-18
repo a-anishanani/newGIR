@@ -68,13 +68,10 @@ public class Login extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(Login.this, "Logged in successfully", Toast.LENGTH_SHORT).show();
                             //then, redirect user to mainactivity
-                            startActivity(new Intent(getApplicationContext(), Profile.class));
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
                         } else {
                             Toast.makeText(Login.this, "Error" + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
-
-
-
                         }
                     }
                 });
@@ -99,12 +96,11 @@ public class Login extends AppCompatActivity {
                 passwordResetDialog.setMessage("Enter your email to receive reset password link");
                 passwordResetDialog.setView(resetMail);
 
-                //user click yes/no
+                //user click continue
                 passwordResetDialog.setPositiveButton("CONTINUE", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //extract email and send reset link
-
                         String mail = resetMail.getText().toString();
                         fAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
@@ -115,26 +111,20 @@ public class Login extends AppCompatActivity {
                             @Override
                             public void onFailure(@NonNull Exception e) {
                                 Toast.makeText(Login.this, "Error occurred while sending reset link" + e.getMessage(), Toast.LENGTH_SHORT).show();
-
                             }
                         });
-
-
-
-
                     }
                 });
 
+                //user click cancel
                 passwordResetDialog.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //close dialog box
-
                     }
                 });
 
                 passwordResetDialog.create().show();
-
             }
         });
 

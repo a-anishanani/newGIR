@@ -1,5 +1,5 @@
-include ':launcher-debug'
 include ':unityLibrary-debug'
+include ':launcher-debug'
 include ':app'
 rootProject.name = "GreenIndoorAR"
 

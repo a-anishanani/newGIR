@@ -16,7 +16,7 @@ public class WelcomePage extends AppCompatActivity {
         setContentView(R.layout.activity_welcome_page);
 
         signup = findViewById(R.id.signup1);
-        login   = findViewById(R.id.login1);
+        login = findViewById(R.id.login1);
 
 
         signup.setOnClickListener(new View.OnClickListener() {
@@ -34,7 +34,4 @@ public class WelcomePage extends AppCompatActivity {
                 startActivity(loginPage);
             }
         });
-    }
-
-
-}
+    }   }

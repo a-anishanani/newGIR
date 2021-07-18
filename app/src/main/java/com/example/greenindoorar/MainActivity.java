@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
         clickSnake = findViewById(R.id.cardSnake);
 
-
         clickSnake.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

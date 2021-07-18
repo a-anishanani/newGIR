@@ -93,7 +93,7 @@ public class Profile extends AppCompatActivity {
 
 
 
-
+        //reset password
         resetPassLocal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -121,7 +121,6 @@ public class Profile extends AppCompatActivity {
                                 Toast.makeText(Profile.this, "Password change failed", Toast.LENGTH_SHORT).show();
                             }
                         });
-
                     }
                 });
 
@@ -146,9 +145,7 @@ public class Profile extends AppCompatActivity {
                 i.putExtra("Last Name", lastname.getText().toString());
                 //i.putExtra("Full Name", fullname.getText().toString());
                 i.putExtra("Email", email.getText().toString());
-
                 startActivity(i);
-
              }
         });
 
@@ -163,7 +160,6 @@ public class Profile extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
                 switch (item.getItemId()) {
                     case R.id.gallery:
                         startActivity(new Intent(getApplicationContext(),

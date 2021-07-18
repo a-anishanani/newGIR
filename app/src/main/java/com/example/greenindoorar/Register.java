@@ -50,8 +50,7 @@ public class Register extends AppCompatActivity {
         fStore      = FirebaseFirestore.getInstance();
 
         if (fAuth.getCurrentUser() != null ) {
-            //then, redirect user to ~mainactivity !!!!!JAP FOR NOW I'M CHANGING TI TO PROFILE ACTIVITY
-            startActivity(new Intent(getApplicationContext(),Profile.class));
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
             finish();
         }
 
@@ -116,8 +115,6 @@ public class Register extends AppCompatActivity {
             public void onClick(View v) {
                 //when user click on the "Already have an account? Sign in here" text
                 startActivity(new Intent(getApplicationContext(), Login.class));
-
-
             }
         });
 

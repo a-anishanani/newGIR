@@ -38,13 +38,6 @@
             android:launchMode="singleTask"
             android:screenOrientation="fullSensor"
             android:theme="@style/UnityThemeSelector" >
-
-            <!--
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
-            -->
             <meta-data
                 android:name="unityplayer.UnityActivity"
                 android:value="true" />
@@ -58,7 +51,7 @@
             android:value="True" />
         <meta-data
             android:name="unity.build-id"
-            android:value="82a0eb14-b636-44f0-ba24-4b38ffe02966" />
+            android:value="5be12bc8-9d4b-4434-84e3-3ff34e2666ff" />
         <meta-data
             android:name="unityplayer.SkipPermissionsDialog"
             android:value="true" />

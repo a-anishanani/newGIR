@@ -60,13 +60,6 @@ public class Gallery extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
-
         //initialize and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -103,9 +96,6 @@ public class Gallery extends AppCompatActivity {
         if (requestCode == 1000) {
             if (resultCode == Activity.RESULT_OK) {
                 Uri imageUri = data.getData();
-
-                //profileImage.setImageURI(imageUri);
-
                 uploadGallerytoFirebase(imageUri);
             }
         }

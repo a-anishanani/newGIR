@@ -29,7 +29,6 @@ public class SnakePlantActivity extends AppCompatActivity {
             }
         });
 
-
         viewAR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,6 +36,5 @@ public class SnakePlantActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
     }
 }
